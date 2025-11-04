@@ -4,10 +4,83 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Form</title>
+    
+    <!-- Bootstrap CSS v5.0 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
+	<!-- Form Container -->
+    <div class="form-container">
+        <h1>Internship Form</h1>
+        
+        <form id="internshipForm" class="needs-validation" novalidate>
+            <!-- First Row: First Name, Last Name, Email -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="first-name-input" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="first-name-input" required>
+                    <div class="invalid-feedback">First name required!</div>
+                </div>
+                <div class="col-md-4">
+                    <label for="last-name-input" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="last-name-input" required>
+                    <div class="invalid-feedback">Last name required!</div>
+                </div>
+                <div class="col-md-4">
+                    <label for="email-input" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email-input" placeholder="xyz@abc.com" required>
+                    <div class="invalid-feedback">Email required!</div>
+                </div>
+            </div>
+            
+            <!-- Second Row: College, Graduation Year, Roll No -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="college-input" class="form-label">College</label>
+                    <input type="text" class="form-control" id="college-input" required>
+                    <div class="invalid-feedback">Please provide a valid college.</div>
+                </div>
+                <div class="col-md-3">
+                    <label for="grad-year-select" class="form-label">Graduation Year</label>
+                    <select class="form-select" id="grad-year-select" required>
+                        <option value="" selected>Choose...</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a valid Graduation Year.</div>
+                </div>
+                <div class="col-md-3">
+                    <label for="roll-no-input" class="form-label">Roll No.</label>
+                    <input type="text" class="form-control" id="roll-no-input" required>
+                    <div class="invalid-feedback">Please provide a valid Roll no.</div>
+                </div>
+            </div>
+            
+            <!-- Checkbox -->
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="conditions-checkbox" required>
+                <label class="form-check-label" for="conditions-checkbox">
+                    Agree to terms and conditions
+                </label>
+                <div class="checkbox-error">You must agree before submitting.</div>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit form</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    
     <script type="text/javascript" src="./script.js">
 </script>
 
