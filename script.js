@@ -1,5 +1,4 @@
-//your code here
-// Get the form element
+  // Get the form element
         const form = document.getElementById('internshipForm');
         
         // Add submit event listener
@@ -24,11 +23,10 @@
                 
                 // Handle checkbox validation
                 const checkbox = document.getElementById('conditions-checkbox');
-                const checkboxContainer = checkbox.closest('.form-check');
                 if (!checkbox.checked) {
-                    checkboxContainer.classList.add('is-invalid');
+                    checkbox.classList.add('is-invalid');
                 } else {
-                    checkboxContainer.classList.remove('is-invalid');
+                    checkbox.classList.remove('is-invalid');
                 }
             } else {
                 // Form is valid, you can submit it here
@@ -55,12 +53,11 @@
         // Handle checkbox real-time validation
         const checkbox = document.getElementById('conditions-checkbox');
         checkbox.addEventListener('change', function() {
-            const checkboxContainer = this.closest('.form-check');
             if (form.classList.contains('was-validated')) {
                 if (this.checked) {
-                    checkboxContainer.classList.remove('is-invalid');
+                    this.classList.remove('is-invalid');
                 } else {
-                    checkboxContainer.classList.add('is-invalid');
+                    this.classList.add('is-invalid');
                 }
             }
         });
